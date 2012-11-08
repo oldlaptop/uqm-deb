@@ -1,0 +1,17 @@
+uqm for Debian
+--------------
+
+UQM uses a custom build system, which creates some challenges for packaging with debhelper.
+Cleaning and building are handled relatively simply by overrides to dh_auto_clean and dh_auto_build,
+but configuring deserves a few words here. UQM's build system configures by default with an interactive
+menu system, which for obvious reasons is not acceptable in the build process. Fortunately
+(see build/unix/README.packages), provision has been made for providing default values to the build system
+and configuring automatically, by passing the build system a precooked 'config.state' file and running
+build.sh with a special 'reprocess_config' option. This package ships a copy of 'config.state' in
+debian/config.state, with sane defaults for a .deb containing a fully-featured game. If you want to modify
+configuration options, you can either edit this file by hand or use the provided 'regenerate-config' target
+(debian/rules regenerate-config) to generate a fresh copy with the interactive menu system.
+
+Note also that while this package build-depends against libmikmod-dev, it is possible to use the mikmod
+included in the upstream source if desired, by setting the applicable config option and (if necessary)
+overriding the build dependency.

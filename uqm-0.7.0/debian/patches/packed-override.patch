@@ -1,0 +1,16 @@
+
+--- a/src/options.c
++++ b/src/options.c
+@@ -436,7 +436,11 @@ mountAddonDir (uio_Repository *repositor
+ 					 "not found; addon skipped.", addon);
+ 				continue;
+ 			}
+-			mountDirZips (addonDir, mountname, uio_MOUNT_BELOW, mountHandle);
++			/*
++			   Currently the debian packages ship unpacked files,
++			   so mount zipfiles above them
++			*/
++			mountDirZips (addonDir, mountname, uio_MOUNT_ABOVE, mountHandle);
+ 			uio_closeDir (addonDir);
+ 		}
+ 	}

@@ -1,0 +1,3 @@
+debian/uqm.xpm /usr/share/pixmaps/
+debian/uqm.desktop /usr/share/applications/
+doc/users/manual.txt /usr/share/doc/uqm/manual.txt

@@ -1,0 +1,3 @@
+content/addons/balance/* usr/share/games/uqm/content/addons/balance/
+debian/uqm-balance.xpm usr/share/pixmaps/
+debian/uqm-balance.desktop usr/share/applications/

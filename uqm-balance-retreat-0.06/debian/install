@@ -1,0 +1,3 @@
+content/addons/balance-retreat/* usr/share/games/uqm/content/addons/balance-retreat/
+debian/uqm-balance-retreat.xpm usr/share/pixmaps/
+debian/uqm-balance-retreat.desktop usr/share/applications

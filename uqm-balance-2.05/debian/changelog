@@ -1,0 +1,26 @@
+uqm-balance (2.05-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Old Laptop <oldlaptop654@aol.com>  Mon, 29 Oct 2012 17:48:31 -0400
+
+uqm-balance (2.04-2) unstable; urgency=low
+
+  * Fixes from upstream git
+   (https://github.com/Roisack/Shiver-Balance-Mod/):
+  * uqm-wrapper.in modified to call uqm-balance rather than uqm
+  * DOGIs are no longer immune to hostile shrapnel
+
+ -- Old Laptop <oldlaptop654@aol.com>  Sun, 09 Sep 2012 16:47:28 -0400
+
+uqm-balance (2.04-1) unstable; urgency=low
+
+  * Ugly hack to keep from conflicting with uqm
+
+ -- Old Laptop <oldlaptop654@aol.com>  Sat, 01 Sep 2012 16:52:31 -0400
+
+uqm-balance (2.04) unstable; urgency=low
+
+  * Initial release
+
+ -- Old Laptop <oldlaptop654@aol.com>  Sat, 1 Sep 2012 09:03:01 -0400
