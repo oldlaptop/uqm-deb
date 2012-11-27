@@ -1,0 +1,2 @@
+shlibs:Depends=libc6 (>= 2.3.4), libgl1-mesa-glx | libgl1, libmikmod2 (>= 3.1.10), libogg0 (>= 1.0rc3), libsdl-image1.2 (>= 1.2.10), libsdl1.2debian (>= 1.2.11), libvorbis0a (>= 1.1.2), libvorbisfile3 (>= 1.1.2), zlib1g (>= 1:1.1.4)
+misc:Depends=

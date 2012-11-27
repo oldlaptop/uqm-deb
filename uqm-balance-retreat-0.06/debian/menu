@@ -1,6 +1,0 @@
-?package(uqm-balance-retreat):\
-  needs="X11"\
-  section="Games/Adventure"\
-  title="uqm-balance-retreat" command="/usr/games/uqm-balance-retreat"\
-  hints="Action,Adventure,RPG,Space"\
-  icon="/usr/share/pixmaps/uqm-balance-retreat.xpm"
