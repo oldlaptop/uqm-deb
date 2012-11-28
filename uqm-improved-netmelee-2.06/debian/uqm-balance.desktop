@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=The Ur-Quan Masters - Shiver's Improved Netmelee Mod
+Comment=Open-source port of the classic grand space action-adveture game Star Control II, modified for a better netplay experience
+icon=uqm-balance.xpm
+Exec=/usr/games/uqm-improved-netmelee
+
+

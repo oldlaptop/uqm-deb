@@ -1,0 +1,8 @@
+--- uqm-improved-netmelee-2.06.orig/build/unix/uqm-wrapper.in
++++ uqm-improved-netmelee-2.06/build/unix/uqm-wrapper.in
+@@ -1,4 +1,4 @@
+ #!/bin/sh
+ # Wrapper script for starting The Ur-Quan Masters
+-exec "@INSTALL_LIBDIR@uqm/uqm-balance-retreat" "--contentdir=@INSTALL_SHAREDIR@uqm/content" "$@"
++exec "@INSTALL_LIBDIR@uqm/uqm-improved-netmelee" "--contentdir=@INSTALL_SHAREDIR@uqm/content" "$@"
+ 

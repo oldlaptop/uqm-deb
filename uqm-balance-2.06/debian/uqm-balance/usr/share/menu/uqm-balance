@@ -1,6 +1,0 @@
-?package(uqm-balance):\
-  needs="X11"\
-  section="Games/Adventure"\
-  title="uqm-balance" command="/usr/games/uqm-balance"\
-  hints="Action,Adventure,RPG,Space"\
-  icon="/usr/share/pixmaps/uqm-balance.xpm"
