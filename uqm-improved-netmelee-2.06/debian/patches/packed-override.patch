@@ -1,7 +1,36 @@
 
---- a/src/options.c
-+++ b/src/options.c
-@@ -436,7 +436,11 @@ mountAddonDir (uio_Repository *repositor
+Index: uqm-improved-netmelee-2.06/src/options.c
+===================================================================
+--- uqm-improved-netmelee-2.06.orig/src/options.c	2012-12-05 21:11:15.006218378 -0500
++++ uqm-improved-netmelee-2.06/src/options.c	2012-12-17 16:58:27.280861613 -0500
+@@ -348,7 +348,11 @@
+ 	packagesDir = uio_openDir (repository, "/packages", 0);
+ 	if (packagesDir != NULL)
+ 	{
+-		mountDirZips (packagesDir, "/", uio_MOUNT_BELOW, contentMountHandle);
++		/*
++		   Currently the debian packages ship unpacked files,
++		   so mount zipfiles above them
++		*/
++		mountDirZips (packagesDir, "/", uio_MOUNT_ABOVE, contentMountHandle);
+ 		uio_closeDir (packagesDir);	
+ 	}
+ 
+@@ -392,8 +396,11 @@
+ 				"options are ignored.");
+ 		return;
+ 	}
+-
+-	mountDirZips (addonsDir, "addons", uio_MOUNT_BELOW, mountHandle);
++	/*
++	   Currently the debian packages ship unpacked files,
++	   so mount zipfiles above them
++	*/
++	mountDirZips (addonsDir, "addons", uio_MOUNT_ABOVE, mountHandle);
+ 			
+ 	availableAddons = uio_getDirList (addonsDir, "", "", match_MATCH_PREFIX);
+ 	if (availableAddons != NULL)
+@@ -441,7 +448,11 @@
  					 "not found; addon skipped.", addon);
  				continue;
  			}

@@ -1,0 +1,12 @@
+*.deb
+*.dsc
+*.tar.gz
+*.diff.gz
+*.changes
+
+*.debhelper
+*.log
+
+build.vars
+config_*.h
+
