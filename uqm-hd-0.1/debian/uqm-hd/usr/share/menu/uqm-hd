@@ -1,0 +1,6 @@
+?package(uqm-hd):\
+  needs="X11"\
+  section="Games/Adventure"\
+  title="uqm-hd" command="/usr/games/uqm-hd"\
+  hints="Action,Adventure,RPG,Space"\
+  icon="/usr/share/pixmaps/uqm-hd.xpm"

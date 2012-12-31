@@ -1,0 +1,6 @@
+rm ./uqm-debug
+rm -rf ./The\ Ur-Quan\ Masters\ HD.app/
+./build.sh uqm clean
+CFLAGS="-DHAVE_UNISTD_H -I/Library/Frameworks/SDL.framework/Headers"  ./build.sh uqm config
+./build.sh uqm install
+open ./The\ Ur-Quan\ Masters\ HD.app/

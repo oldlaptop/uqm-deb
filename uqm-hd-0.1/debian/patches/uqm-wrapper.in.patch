@@ -1,0 +1,8 @@
+--- a/build/unix/uqm-wrapper.in
++++ b/build/unix/uqm-wrapper.in
+@@ -1,4 +1,4 @@
+ #!/bin/sh
+ # Wrapper script for starting The Ur-Quan Masters
+-exec "@INSTALL_LIBDIR@uqm/uqm-h" "--contentdir=@INSTALL_SHAREDIR@uqm/content" "$@"
++exec "@INSTALL_LIBDIR@uqm/uqm-hd" "--contentdir=@INSTALL_SHAREDIR@uqm/content" "$@"
+ 

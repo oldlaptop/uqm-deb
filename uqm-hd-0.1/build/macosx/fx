@@ -1,0 +1,5 @@
+rm ./uqm-debug
+rm -rf ./The\ Ur-Quan\ Masters\ HD.app/
+rm -rf ./P6014.app/
+./build2.sh uqm install
+open ./The\ Ur-Quan\ Masters\ HD.app/

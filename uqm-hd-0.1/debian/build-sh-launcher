@@ -1,0 +1,6 @@
+#! /bin/sh
+
+export BUILD_WORK=debian/build_work
+
+./build.sh uqm
+

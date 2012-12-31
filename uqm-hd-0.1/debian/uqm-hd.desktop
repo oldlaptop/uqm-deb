@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=The Ur-Quan Masters - HD Mod
+Comment=Open-source port of the classic grand space action-adveture game Star Control II, with hires graphics
+icon=uqm-hd.xpm
+Exec=/usr/games/uqm-hd
+

@@ -1,0 +1,6 @@
+rm ./uqm-debug
+rm -rf ./The\ Ur-Quan\ Masters\ HD.app/
+./build.sh uqm clean
+./build.sh uqm config
+./build.sh uqm install
+./uqm-debug

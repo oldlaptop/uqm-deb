@@ -1,0 +1,24 @@
+Source: uqm-hd
+Section: unofficial/games
+Priority: optional
+Maintainer: Old Laptop <oldlaptop654@aol.com>
+Build-Depends: debhelper (>= 7.0.50~), libsdl1.2-dev, libsdl-image1.2-dev, zlib1g-dev, libogg-dev, libvorbis-dev, libmikmod2-dev
+Standards-Version: 3.9.1
+Homepage: http://sc2.sourceforge.net
+
+Package: uqm-hd
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, uqm-content(>= 0.7.0)
+Recommends: uqm-hd-hires4x
+Description: Space adventure game
+ The Ur-Quan Masters is a cross platform port of Star Control II,
+ a space-based action adventure game. You return to Earth with a vessel
+ built with technology from an ancient race called the Precursors only
+ to find it enslaved. Gather allies from a wide variety of races,
+ engage in space combat with various foes, and save the galaxy from
+ the Ur-Quan!
+ .
+ This package contains dczanik's HD mod, which provides the capability
+ to use high-resolution graphics in the UQM engine. This package contains
+ only the basic uqm-hd binary, you will need uqm-hd-hires4x to play the
+ game in high-resolution mode.

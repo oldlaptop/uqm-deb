@@ -1,0 +1,4 @@
+destdir.patch
+packed-override.patch
+no-svnversion.patch
+uqm-wrapper.in.patch
