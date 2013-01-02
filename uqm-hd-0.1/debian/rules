@@ -42,7 +42,7 @@ override_dh_auto_test:
 override_dh_auto_install:
 	DESTDIR=${CURDIR}/debian/uqm-hd ./build.sh uqm install
 	# TODO: This is an ugly hack, prevent this from being installed in some other way
-	rm debian/uqm-hd/usr/share/games/uqm/content/version
+#	rm debian/uqm-hd/usr/share/games/uqm/content/version
 
 override_dh_installchangelogs:
 	dh_installchangelogs WhatsNew

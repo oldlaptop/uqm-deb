@@ -8,7 +8,7 @@ Homepage: http://sc2.sourceforge.net
 
 Package: uqm-hd
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, uqm-content(>= 0.7.0)
+Depends: ${shlibs:Depends}, ${misc:Depends}, uqm-hd-content
 Recommends: uqm-hd-hires4x
 Description: Space adventure game
  The Ur-Quan Masters is a cross platform port of Star Control II,
