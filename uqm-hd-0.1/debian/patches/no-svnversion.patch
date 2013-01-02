@@ -1,14 +1,10 @@
-Index: uqm-hd-0.1/src/svnversion.h
-===================================================================
---- uqm-hd-0.1.orig/src/svnversion.h	2012-12-31 10:47:10.260705544 -0500
-+++ /dev/null	1970-01-01 00:00:00.000000000 +0000
+--- a/src/svnversion.h
++++ /dev/null
 @@ -1 +0,0 @@
 -#define UQMHD_SVN_REVISION "894:895M"
 \ No newline at end of file
-Index: uqm-hd-0.1/src/uqm/restart.c
-===================================================================
---- uqm-hd-0.1.orig/src/uqm/restart.c	2012-12-31 10:47:10.260705544 -0500
-+++ uqm-hd-0.1/src/uqm/restart.c	2012-12-31 10:50:34.217716910 -0500
+--- a/src/uqm/restart.c
++++ b/src/uqm/restart.c
 @@ -41,7 +41,7 @@
  #include "util.h"
  #include "starcon.h"
@@ -18,6 +14,15 @@ Index: uqm-hd-0.1/src/uqm/restart.c
  #include "libs/graphics/gfx_common.h"
  #include "libs/inplib.h"
  
+@@ -71,7 +71,7 @@
+ 	STAMP s;
+ 	TEXT t;
+ 	UNICODE buf[64];
+-	COUNT svn_revision = 0; // JMS
++//	COUNT svn_revision = 0; // JMS
+ 
+ 	//DC: Load the different menus depending on the resolution factor
+ 	if (resolutionFactor < 1)
 @@ -106,6 +106,8 @@
  	LockMutex (GraphicsLock);
  	DrawStamp (&s);
@@ -27,21 +32,36 @@ Index: uqm-hd-0.1/src/uqm/restart.c
  	// JMS: Hack for printing out the correct SVN revision number.
  	{
  		UNICODE svn_buf[64] = {0};
-@@ -146,8 +148,10 @@
+@@ -132,7 +134,7 @@
+ 		// Think about this for a while ;)
+ 		++svn_revision;
+ 	}
+-	
++*/	
+ 	// Put the version number in the bottom right corner.
+ 	SetContextFont (TinyFont);
+ 	t.pStr = buf;
+@@ -140,14 +142,17 @@
+ 	t.baseline.y = SCREEN_HEIGHT - 2;
+ 	t.align = ALIGN_RIGHT;
+ 	t.CharCount = (COUNT)~0;
+-	sprintf (buf, "v%d.%d.%d%s - SVN r%d", UQM_MAJOR_VERSION, UQM_MINOR_VERSION, UQM_PATCH_VERSION, UQM_EXTRA_VERSION, svn_revision);
++//	sprintf (buf, "v%d.%d.%d%s - SVN r%d", UQM_MAJOR_VERSION, UQM_MINOR_VERSION, UQM_PATCH_VERSION, UQM_EXTRA_VERSION, svn_revision);
++	sprintf (buf, "v%d.%d.%d%s", UQM_MAJOR_VERSION, UQM_MINOR_VERSION, UQM_PATCH_VERSION, UQM_EXTRA_VERSION);
+ 	SetContextForeGroundColor (WHITE_COLOR);
+ 	font_DrawText (&t);
  
  	UnlockMutex (GraphicsLock);
  	UnbatchGraphics ();
-+*/
++
  }
  
 +
  // JMS_GFX: The cleanup boolean can be used to avoid drawing a wrong-sized "Setup" flash overlay.
  static void
  DrawRestartMenu (MENU_STATE *pMS, BYTE NewState, FRAME f, BOOLEAN cleanup)
-Index: uqm-hd-0.1/build/unix/build_functions
-===================================================================
---- uqm-hd-0.1.orig/build/unix/build_functions	2012-12-31 10:47:10.260705544 -0500
-+++ uqm-hd-0.1/build/unix/build_functions	2012-12-31 10:47:11.924713789 -0500
+--- a/build/unix/build_functions
++++ b/build/unix/build_functions
 @@ -160,9 +160,6 @@
  	. "${BUILD_REC_PATH:=./}Makeproject"
  
