@@ -3,6 +3,7 @@ Type=Application
 Version=1.0
 Name=The Ur-Quan Masters
 Comment=Open-source port of the classic grand space action-adveture game Star Control II
-icon=uqm.xpm
+Categories=Game;AdventureGame;
+Icon=uqm.xpm
 Exec=/usr/games/uqm
 
