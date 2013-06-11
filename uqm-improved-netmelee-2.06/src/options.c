@@ -348,7 +348,11 @@ mountContentDir (uio_Repository *repository, const char *contentPath)
 	packagesDir = uio_openDir (repository, "/packages", 0);
 	if (packagesDir != NULL)
 	{
-		mountDirZips (packagesDir, "/", uio_MOUNT_BELOW, contentMountHandle);
+		/*
+		   Currently the debian packages ship unpacked files,
+		   so mount zipfiles above them
+		*/
+		mountDirZips (packagesDir, "/", uio_MOUNT_ABOVE, contentMountHandle);
 		uio_closeDir (packagesDir);	
 	}
 
@@ -392,8 +396,11 @@ mountAddonDir (uio_Repository *repository, uio_MountHandle *contentMountHandle,
 				"options are ignored.");
 		return;
 	}
-
-	mountDirZips (addonsDir, "addons", uio_MOUNT_BELOW, mountHandle);
+	/*
+	   Currently the debian packages ship unpacked files,
+	   so mount zipfiles above them
+	*/
+	mountDirZips (addonsDir, "addons", uio_MOUNT_ABOVE, mountHandle);
 			
 	availableAddons = uio_getDirList (addonsDir, "", "", match_MATCH_PREFIX);
 	if (availableAddons != NULL)
