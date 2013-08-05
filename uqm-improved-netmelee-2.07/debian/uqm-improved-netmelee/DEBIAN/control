@@ -1,0 +1,20 @@
+Package: uqm-improved-netmelee
+Version: 2.07-1
+Architecture: amd64
+Maintainer: Old Laptop <oldlaptop654@aol.com>
+Installed-Size: 2105
+Depends: libc6 (>= 2.14), libgl1-mesa-glx | libgl1, libmikmod2 (>= 3.1.10), libogg0 (>= 1.0rc3), libsdl-image1.2 (>= 1.2.10), libsdl1.2debian (>= 1.2.11), libvorbis0a (>= 1.1.2), libvorbisfile3 (>= 1.1.2), zlib1g (>= 1:1.1.4), uqm-content (>= 0.7.0)
+Section: unofficial/games
+Priority: optional
+Homepage: http://sc2.sourceforge.net
+Description: Space adventure game - Shiver's Balance Mod
+ The Ur-Quan Masters is a cross platform port of Star Control II,
+ a space-based action adventure game. You return to Earth with a vessel
+ built with technology from an ancient race called the Precursors only
+ to find it enslaved. Gather allies from a wide variety of races,
+ engage in space combat with various foes, and save the galaxy from
+ the Ur-Quan!
+ .
+ This package contains Shiver's Improved Netmelee Mod (formerly
+ Shiver's Balance Mod), a modified binary that rebalances Supermelee
+ for network play, and adds some extra melee-related features.

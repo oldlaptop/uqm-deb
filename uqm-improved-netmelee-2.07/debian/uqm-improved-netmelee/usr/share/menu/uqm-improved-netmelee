@@ -1,0 +1,6 @@
+?package(uqm-improved-netmelee):\
+  needs="X11"\
+  section="Games/Adventure"\
+  title="uqm-improved-netmelee" command="/usr/games/uqm-improved-netmelee"\
+  hints="Action,Adventure,RPG,Space"\
+  icon="/usr/share/pixmaps/uqm-balance.xpm"
