@@ -13,7 +13,7 @@ export DH_VERBOSE=1
 #export BUILD_WORK=debian/build_work/
 
 %:
-	dh $@ 
+	dh --without python-support $@ 
 
 override_dh_auto_clean:
 	./build.sh uqm clean
