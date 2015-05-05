@@ -16,7 +16,7 @@ export UQM_BIN_NAME="uqm-improved-netmelee"
 #export BUILD_WORK=debian/build_work/
 
 %:
-	dh $@ 
+	dh --without python-support $@ 
 
 override_dh_auto_clean:
 	./build.sh uqm clean

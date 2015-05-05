@@ -1,0 +1,13 @@
+Description: ugly hack to add -lm to the linker commandline, needed as of jessie
+
+--- uqm-improved-netmelee-2.08.orig/build.vars.in
++++ uqm-improved-netmelee-2.08/build.vars.in
+@@ -30,7 +30,7 @@ SED='@SED@'
+ REZ='@REZ@'
+ WINDRES='@WINDRES@'
+ uqm_CFLAGS='@CFLAGS@'
+-uqm_LDFLAGS='@LDFLAGS@'
++uqm_LDFLAGS='@LDFLAGS@ -lm'
+ uqm_INSTALL_BINDIR=$DESTDIR'@INSTALL_BINDIR@'
+ uqm_INSTALL_LIBDIR=$DESTDIR'@INSTALL_LIBDIR@'
+ uqm_INSTALL_SHAREDIR=$DESTDIR'@INSTALL_SHAREDIR@'

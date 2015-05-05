@@ -2,3 +2,4 @@ destdir.patch
 packed-override.patch
 install-binary-correctly.patch
 uqm-wrapper.in.patch
+build-vars-lm.patch
